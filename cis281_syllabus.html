@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cis281_syllabus.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="cis-281-network-administration-i-syllabus"><strong>CIS 281: Network Administration I Syllabus</strong></h1>
+<h2 id="course-information"><strong>Course Information</strong></h2>
+<ul>
+<li><strong>Course Title</strong>: Network Administration I</li>
+<li><strong>Instructor</strong>: Dr. Jamie Roberts</li>
+<li><strong>Email</strong>: jamie.roberts@university.edu</li>
+<li><strong>Office Hours</strong>: Mondays and Wednesdays, 1:00 PM - 3:00 PM</li>
+<li><strong>Class Schedule</strong>: Tuesdays and Thursdays, 9:00 AM - 10:30 AM</li>
+<li><strong>Location</strong>: Tech Building, Room 201</li>
+</ul>
+<hr>
+<h2 id="course-description"><strong>Course Description</strong></h2>
+<p>CIS 281 introduces students to the fundamental principles of network administration, including basic network setup, device configuration, and troubleshooting. Students will learn about networking models, protocols, and tools necessary to manage local area networks (LANs).</p>
+<hr>
+<h2 id="course-objectives"><strong>Course Objectives</strong></h2>
+<p>By the end of this course, students will:</p>
+<ol>
+<li>Understand basic networking concepts, including the OSI and TCP/IP models.</li>
+<li>Configure and manage network devices such as switches and routers.</li>
+<li>Implement IP addressing and subnetting schemes.</li>
+<li>Utilize network troubleshooting tools and techniques.</li>
+<li>Demonstrate an understanding of network security fundamentals.</li>
+</ol>
+<hr>
+<h2 id="required-materials"><strong>Required Materials</strong></h2>
+<ul>
+<li><strong>Textbook</strong>: <em>Networking Essentials</em> by Jeffrey Beasley and Piyasat Nilkaew (6th Edition)</li>
+<li><strong>Supplies</strong>: Laptop, notebook, pen/pencil, and access to a virtual lab platform.</li>
+</ul>
+<hr>
+<h2 id="grading-policy"><strong>Grading Policy</strong></h2>
+<ul>
+<li><strong>Assignments</strong>: 25%</li>
+<li><strong>Labs</strong>: 25%</li>
+<li><strong>Quizzes</strong>: 15%</li>
+<li><strong>Midterm Exam</strong>: 20%</li>
+<li><strong>Final Exam</strong>: 15%</li>
+</ul>
+<p><strong>Grade Scale</strong>:</p>
+<ul>
+<li>A: 90-100</li>
+<li>B: 80-89</li>
+<li>C: 70-79</li>
+<li>D: 60-69</li>
+<li>F: Below 60</li>
+</ul>
+<hr>
+<h2 id="course-schedule"><strong>Course Schedule</strong></h2>
+<h3 id="week-1-3-networking-basics"><strong>Week 1-3</strong>: Networking Basics</h3>
+<ul>
+<li>Introduction to networks and the OSI model</li>
+<li>TCP/IP protocols and addressing</li>
+</ul>
+<h3 id="week-4-5-network-devices"><strong>Week 4-5</strong>: Network Devices</h3>
+<ul>
+<li>Configuring switches and routers</li>
+<li>VLANs and trunking</li>
+</ul>
+<h3 id="week-6-7-ip-addressing-and-subnetting"><strong>Week 6-7</strong>: IP Addressing and Subnetting</h3>
+<ul>
+<li>Subnet mask calculations</li>
+<li>Classful vs. classless addressing</li>
+</ul>
+<h3 id="week-8-midterm-exam"><strong>Week 8</strong>: <strong>Midterm Exam</strong></h3>
+<h3 id="week-9-10-routing-protocols"><strong>Week 9-10</strong>: Routing Protocols</h3>
+<ul>
+<li>Static routing</li>
+<li>Introduction to dynamic routing protocols (RIP, OSPF)</li>
+</ul>
+<h3 id="week-11-12-network-security-basics"><strong>Week 11-12</strong>: Network Security Basics</h3>
+<ul>
+<li>Firewalls and access control lists (ACLs)</li>
+<li>Secure network design principles</li>
+</ul>
+<h3 id="week-13-14-troubleshooting-networks"><strong>Week 13-14</strong>: Troubleshooting Networks</h3>
+<ul>
+<li>Using tools like <code>ping</code>, <code>traceroute</code>, and <code>Wireshark</code></li>
+<li>Analyzing network logs</li>
+</ul>
+<h3 id="week-15-16-final-exam-preparation-and-final-exam"><strong>Week 15-16</strong>: <strong>Final Exam Preparation and Final Exam</strong></h3>
+<hr>
+<h2 id="policies"><strong>Policies</strong></h2>
+<h3 id="attendance"><strong>Attendance</strong></h3>
+<p>Attendance is mandatory. More than three unexcused absences may affect your final grade.</p>
+<h3 id="late-assignments"><strong>Late Assignments</strong></h3>
+<p>Assignments submitted late will incur a 10% penalty per day, up to 50%.</p>
+<h3 id="academic-integrity"><strong>Academic Integrity</strong></h3>
+<p>All work must be your own. Cheating or plagiarism will result in disciplinary action per university policy.</p>
+<hr>
+<p><strong>Let's dive into the world of network administration!</strong></p>
+
+</body>
+</html>
